@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "music-gear-library": {
+      "hosting": {
+        "my-app": [
+          "music-gear-library"
+        ]
+      }
+    }
+  }
+}
