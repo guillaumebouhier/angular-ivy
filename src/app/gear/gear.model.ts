@@ -1,5 +1,6 @@
 export interface Gear {
-  image: any;
+  id: number;
+  imageUrl: any;
   brand: string;
   model: string;
 }
