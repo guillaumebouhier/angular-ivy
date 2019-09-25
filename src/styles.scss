@@ -28,4 +28,46 @@ body {
 
 .mat-card {
   overflow: hidden;
+  padding: 0px !important;
+  .mat-card-header {
+    padding-top: 10px;
+  }
+  .mat-card-content {
+    overflow: hidden;
+    height: 85%;
+    width: 100%;
+
+    .overlay {
+      height: 100%;
+      background-color: black;
+    }
+    .gear {
+      z-index: 0;
+      height: auto;
+      width: 100%;
+      opacity: 1;
+      clip-path: inset(50px 0px 0px 0px);
+      top: -2px;
+      left: 0px;
+      position: absolute;
+    }
+    .cart {
+      position: relative;
+      z-index: 10;
+      visibility: hidden;
+      height: 48px;
+      width: 48px;
+      margin-left: 50%;
+      margin-top: 25%;
+    }
+  }
+
+  .mat-card-content:hover {
+    .gear {
+      opacity: 1;
+    }
+    .cart {
+      visibility: visible;
+    }
+  }
 }
