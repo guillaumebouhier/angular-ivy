@@ -1,4 +1,4 @@
-# MyApp
+# My Guitar Collection
 
 The goal of this app is to test Akita's state Management system.
 
