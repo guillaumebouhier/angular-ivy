@@ -1,10 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="app-container">
-  <div style="text-align:center">
+  <div>
     <h1>Welcome to my Guitar Collection !</h1>
   </div>
 
-  <div fxLayout="row" fxLayoutGap="10px">
+  <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-around">
     <h2>
       <a routerLink="/music-gear-library" routerLinkActive="active"
         >Music Gear Library</a
@@ -12,9 +12,9 @@
     </h2>
 
     <h2>
-      <a target="_blank" rel="noopener" href="https://angular.io/cli"
-        >CLI Documentation</a
-      >
+      <a routerLink="/cart" routerLinkActive="active">
+        <div [matBadge]="cartCount" matBadgeOverlap="false">My Cart</div>
+      </a>
     </h2>
 
     <h2>
@@ -23,6 +23,5 @@
       >
     </h2>
   </div>
-
   <router-outlet></router-outlet>
 </div>

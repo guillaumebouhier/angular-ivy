@@ -4,7 +4,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 
 import { GearService } from '../gear/gear.service';
 import { GearQuery } from '../gear/gear.query';
-import { Gear } from '../gear/gear.model';
+import { CartService } from '../cart/cart.service';
 
 @Component({
   selector: 'app-music-gear-library',
@@ -14,10 +14,12 @@ import { Gear } from '../gear/gear.model';
 export class MusicGearLibraryComponent {
   /** Based on the screen size, switch from standard to one column per row */
 
+  public cards;
   constructor(
     private breakpointObserver: BreakpointObserver,
     private gearQuery: GearQuery,
-    private gearService: GearService
+    private gearService: GearService,
+    private cartService: CartService
   ) {
     const isLoading = this.gearQuery.selectLoading();
     isLoading.subscribe(loading => {
@@ -37,36 +39,34 @@ export class MusicGearLibraryComponent {
       console.log('Values: ');
       console.log(val);
     });
+
+    const store = this.Store;
+
+    const cardsArray = [];
+    store.forEach(entity => {
+      cardsArray.push({
+        id: entity.id,
+        title: entity.brand,
+        model: entity.model,
+        imageUrl: entity.imageUrl,
+        cols: 1,
+        rows: 1
+      });
+    });
+    this.cards = cardsArray;
   }
 
   public get Cards() {
-    const store = this.Store;
-    const cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-      map(({ matches }) => {
-        let columns = 0;
-        if (matches) {
-          columns = 2;
-        } else {
-          columns = 1;
-        }
-
-        const cardsArray = [];
-        store.forEach(entity => {
-          cardsArray.push({
-            title: entity.brand,
-            model: entity.model,
-            imageUrl: entity.imageUrl,
-            cols: columns,
-            rows: 1
-          });
-        });
-        return cardsArray;
-      })
-    );
-    return cards;
+    return this.cards;
   }
 
   public get Store() {
     return this.gearQuery.getAll();
+  }
+
+  public addToCart(gearId: number) {
+    this.cartService.CartStore.add({
+      id: gearId
+    });
   }
 }

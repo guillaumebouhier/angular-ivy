@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CartService } from './cart/cart.service';
+import { CartQuery } from './cart/cart.query';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my ivy app';
+  constructor(private cartService: CartService, private cartQuery: CartQuery) { }
+
+  public get CartService() {
+    return this.cartService;
+  }
+
+  /**
+   *
+   */
+  public get cartCount(): number {
+    return this.cartQuery.getCount();
+  }
+
 }

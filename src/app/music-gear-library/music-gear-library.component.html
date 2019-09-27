@@ -1,7 +1,7 @@
 <div class="grid-container">
   <mat-grid-list cols="2" rowHeight="350px">
     <mat-grid-tile
-      *ngFor="let card of Cards | async"
+      *ngFor="let card of cards"
       [colspan]="card.cols"
       [rowspan]="card.rows"
     >
@@ -25,12 +25,14 @@
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
           <div class="overlay">
-            <a href="https://reverb.com/"
-              ><img class="cart zindex-10" src="../assets/cart.png" />
-            </a>
-            <a href="https://reverb.com/">
-              <h2 class="link zindex-10">Buy online</h2>
-            </a>
+            <img
+              (click)="addToCart(card.id)"
+              class="cart zindex-10"
+              src="../assets/cart.png"
+            />
+
+            <h2 class="link zindex-10">Add to cart</h2>
+
             <img class="gear" [src]="card.imageUrl" />
           </div>
         </mat-card-content>
