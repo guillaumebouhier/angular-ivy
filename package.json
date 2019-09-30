@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "predeploy": "ng build --prod --base-href 'https://guillaumebouhier.github.io/angular-ivy/'", 
+    "deploy": "ngh --dir dist/my-app"
   },
   "private": true,
   "dependencies": {
