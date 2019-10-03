@@ -32,8 +32,22 @@ export class GearStore extends EntityStore<GearState> {
       imageUrl:
         'https://images.reverb.com/image/upload/s--DB0VuX_N--/f_auto,t_large/v1568112718/q4xhmtcqa64xbc9fe5gg.jpg'
     };
+    const gear4: Gear = {
+      id: 3,
+      brand: 'Charvel',
+      model: 'Guthrie Govan Signature',
+      imageUrl:
+        'https://images.reverb.com/image/upload/s--aVSVzDcj--/f_auto,t_supersize/v1565125389/cnn7pqepcdfbtetfejpw.jpg'
+    };
+    const gear5: Gear = {
+      id: 4,
+      brand: 'Abasi Guitars',
+      model: 'Larada 7',
+      imageUrl:
+        'https://images.reverb.com/image/upload/s--GyLqVpU8--/f_auto,t_supersize/v1562382159/rjqf1hti5kqwgbzla0lf.jpg'
+    };
 
-    this.set([gear1, gear2]);
-    this.add(gear3);
+    this.set([gear1, gear2, gear3, gear4]);
+    this.add(gear5);
   }
 }

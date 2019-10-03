@@ -11,8 +11,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatListModule } from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatRippleModule } from '@angular/material/core';
 import { NG_ENTITY_SERVICE_CONFIG } from '@datorama/akita-ng-entity-service';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
@@ -21,7 +23,12 @@ import { TestComponent } from './test/test.component';
 import { CartComponent } from './cart/cart.component';
 
 @NgModule({
-  declarations: [AppComponent, MusicGearLibraryComponent, TestComponent, CartComponent],
+  declarations: [
+    AppComponent,
+    MusicGearLibraryComponent,
+    TestComponent,
+    CartComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,6 +40,8 @@ import { CartComponent } from './cart/cart.component';
     MatButtonModule,
     LayoutModule,
     MatBadgeModule,
+    MatListModule,
+    MatRippleModule,
     FlexLayoutModule,
     environment.production ? [] : AkitaNgDevtools.forRoot(),
     AkitaNgRouterStoreModule.forRoot()

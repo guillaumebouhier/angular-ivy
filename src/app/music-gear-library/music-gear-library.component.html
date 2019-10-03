@@ -25,13 +25,15 @@
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
           <div class="overlay">
-            <img
-              (click)="addToCart(card.id)"
-              class="cart zindex-10"
-              src="assets/cart.png"
-            />
+            <div matRipple>
+              <img
+                (click)="addToCart(card.id)"
+                class="cart zindex-10"
+                src="assets/cart.png"
+              />
 
-            <h2 class="link zindex-10">Add to cart</h2>
+              <h2 class="link zindex-10">Add to cart</h2>
+            </div>
 
             <img class="gear" [src]="card.imageUrl" />
           </div>
