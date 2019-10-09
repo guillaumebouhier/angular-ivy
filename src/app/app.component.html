@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div fxLayout="column" class="app-container">
-  <h1 class="title">My Guitar Collection !</h1>
+  <h2 class="title">My Guitar Collection !</h2>
 
   <div
     class="menu"
@@ -8,17 +8,17 @@
     fxLayoutAlign="start start"
     fxLayoutGap="40px"
   >
-    <h2>
+    <h3>
       <a routerLink="/music-gear-library" routerLinkActive="active"
         >Music Gear Library</a
       >
-    </h2>
+    </h3>
 
-    <h2>
+    <h3>
       <a routerLink="/cart" routerLinkActive="active">
         <div [matBadge]="cartCount" matBadgeOverlap="false">My Cart</div>
       </a>
-    </h2>
+    </h3>
   </div>
   <div fxLayout="column" class="router-container">
     <router-outlet></router-outlet>
