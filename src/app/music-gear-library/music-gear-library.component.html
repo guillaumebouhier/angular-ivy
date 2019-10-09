@@ -1,44 +1,41 @@
-<div class="grid-container">
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile
-      *ngFor="let card of cards"
-      [colspan]="card.cols"
-      [rowspan]="card.rows"
-    >
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{ card.title }} - {{ card.model }}
-            <button
-              mat-icon-button
-              class="more-button"
-              [matMenuTriggerFor]="menu"
-              aria-label="Toggle menu"
-            >
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div class="overlay">
-            <div matRipple>
-              <img
-                (click)="addToCart(card.id)"
-                class="cart zindex-10"
-                src="assets/cart.png"
-              />
+<div
+  fxLayout="row wrap"
+  fxLayoutAlign="start center"
+  fxLayoutGap="20px"
+  class="grid-container"
+>
+  <mat-card fxFlex *ngFor="let card of cards" class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>
+        {{ card.title }} - {{ card.model }}
+        <button
+          mat-icon-button
+          class="more-button"
+          [matMenuTriggerFor]="menu"
+          aria-label="Toggle menu"
+        >
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before">
+          <button mat-menu-item>Expand</button>
+          <button mat-menu-item>Remove</button>
+        </mat-menu>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="dashboard-card-content">
+      <div class="overlay">
+        <div matRipple>
+          <img
+            (click)="addToCart(card.id)"
+            class="cart zindex-10"
+            src="assets/cart.png"
+          />
 
-              <h2 class="link zindex-10">Add to cart</h2>
-            </div>
+          <h2 class="link zindex-10">Add to cart</h2>
+        </div>
 
-            <img class="gear" [src]="card.imageUrl" />
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+        <img class="gear" [src]="card.imageUrl" />
+      </div>
+    </mat-card-content>
+  </mat-card>
 </div>

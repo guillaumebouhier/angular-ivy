@@ -39,16 +39,24 @@ mat-list {
     margin-bottom: 50px;
   }
 }
+.menu {
+  padding-left: 20px;
+}
 
 .small {
   width: 120px;
 }
 
 .mat-card {
+  min-width: 350px;
+  margin-bottom: 20px;
   overflow: hidden;
   padding: 0px !important;
   .mat-card-header {
     padding-top: 10px;
+  }
+  .mat-card-title {
+    font-size: 18px;
   }
   .mat-card-content {
     overflow: hidden;
@@ -72,8 +80,6 @@ mat-list {
     .cart {
       position: relative;
       visibility: hidden;
-      height: 100px;
-      width: 100px;
       margin-top: 10%;
       opacity: 0.7;
     }
@@ -81,9 +87,6 @@ mat-list {
     .link {
       position: relative;
       visibility: hidden;
-      height: 100px;
-      width: 100px;
-      margin-left: 42%;
       opacity: 0.8;
     }
   }

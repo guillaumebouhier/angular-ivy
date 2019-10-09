@@ -1,8 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div fxLayout="column" class="app-container">
-  <h1 class="title">Welcome to My Guitar Collection !</h1>
+  <h1 class="title">My Guitar Collection !</h1>
 
-  <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-around">
+  <div
+    class="menu"
+    fxLayout="row"
+    fxLayoutAlign="start start"
+    fxLayoutGap="40px"
+  >
     <h2>
       <a routerLink="/music-gear-library" routerLinkActive="active"
         >Music Gear Library</a
@@ -13,12 +18,6 @@
       <a routerLink="/cart" routerLinkActive="active">
         <div [matBadge]="cartCount" matBadgeOverlap="false">My Cart</div>
       </a>
-    </h2>
-
-    <h2>
-      <a target="_blank" rel="noopener" href="https://blog.angular.io/"
-        >Angular blog</a
-      >
     </h2>
   </div>
   <div fxLayout="column" class="router-container">

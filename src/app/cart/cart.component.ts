@@ -15,11 +15,11 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.items = this.cartQuery.getAll();
-    if (this.items.length === 0) {
+    /*     if (this.items.length === 0) {
       this.items.push({ id: 0 });
       this.items.push({ id: 1 });
       this.items.push({ id: 2 });
-    }
+    } */
   }
 
   public get Items(): Cart[] {

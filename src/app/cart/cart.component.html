@@ -4,7 +4,9 @@
       ><div fxLayoutAlign="center center" fxLayoutGap="10px">
         <img class="small" [src]="getGear(item.id).imageUrl" />
         <span>
-          Item {{ i + 1 }}: {{ getGear(item.id).brand }} --
+          Item {{ i + 1 }}:<br />
+
+          {{ getGear(item.id).brand }} --
           {{ getGear(item.id).model }}
         </span>
       </div>
