@@ -1,24 +1,31 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div fxLayout="column" class="app-container">
-  <h2 class="title">My Guitar Collection !</h2>
-
   <div
-    class="menu"
+    class="menu mat-elevation-z8"
     fxLayout="row"
-    fxLayoutAlign="start start"
+    fxLayoutAlign="start center"
     fxLayoutGap="40px"
   >
-    <h3>
-      <a routerLink="/music-gear-library" routerLinkActive="active"
+    <nav>
+      <a matRipple routerLink="/" class="title">My Guitar Collection !</a>
+    </nav>
+    <nav>
+      <a matRipple routerLink="/music-gear-library" routerLinkActive="active"
         >Music Gear Library</a
       >
-    </h3>
+    </nav>
 
-    <h3>
-      <a routerLink="/cart" routerLinkActive="active">
-        <div [matBadge]="cartCount" matBadgeOverlap="false">My Cart</div>
+    <nav>
+      <a matRipple routerLink="/cart" routerLinkActive="active">
+        <div
+          [matBadge]="cartCount"
+          [matBadgeHidden]="cartCount === 0"
+          matBadgeOverlap="false"
+        >
+          My Cart
+        </div>
       </a>
-    </h3>
+    </nav>
   </div>
   <div fxLayout="column" class="router-container">
     <router-outlet></router-outlet>
