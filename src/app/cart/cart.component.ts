@@ -7,11 +7,11 @@ import { Gear } from '../gear/gear.model';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss']
+  styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
   private items: Cart[];
-  constructor(private cartQuery: CartQuery, private gearQuery: GearQuery) {}
+  constructor(private cartQuery: CartQuery, private gearQuery: GearQuery) { }
 
   ngOnInit() {
     this.items = this.cartQuery.getAll();

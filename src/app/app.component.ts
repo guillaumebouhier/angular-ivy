@@ -5,7 +5,7 @@ import { CartQuery } from './cart/cart.query';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'my ivy app';
@@ -21,5 +21,4 @@ export class AppComponent {
   public get cartCount(): number {
     return this.cartQuery.getCount();
   }
-
 }
