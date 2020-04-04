@@ -1,27 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div fxLayout="column" class="app-container">
-  <div
-    class="menu mat-elevation-z8"
-    fxLayout="row"
-    fxLayoutAlign="start center"
-    fxLayoutGap="40px"
-  >
+  <app-subcomponent (voted)='voted()'></app-subcomponent>
+  <div class="menu mat-elevation-z8" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px">
     <nav>
       <a matRipple routerLink="/" class="title">My Guitar Collection !</a>
     </nav>
     <nav>
-      <a matRipple routerLink="/music-gear-library" routerLinkActive="active"
-        >Music Gear Library</a
-      >
+      <a matRipple routerLink="/music-gear-library" routerLinkActive="active">Music Gear Library</a>
     </nav>
 
     <nav>
       <a matRipple routerLink="/cart" routerLinkActive="active">
-        <div
-          [matBadge]="cartCount"
-          [matBadgeHidden]="cartCount === 0"
-          matBadgeOverlap="false"
-        >
+        <div [matBadge]="cartCount" [matBadgeHidden]="cartCount === 0" matBadgeOverlap="false">
           My Cart
         </div>
       </a>

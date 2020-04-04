@@ -21,4 +21,8 @@ export class AppComponent {
   public get cartCount(): number {
     return this.cartQuery.getCount();
   }
+
+  public voted() {
+    console.log('voted');
+  }
 }

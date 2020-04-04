@@ -21,13 +21,15 @@ import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { environment } from '../environments/environment';
 import { TestComponent } from './test/test.component';
 import { CartComponent } from './cart/cart.component';
+import { SubcomponentComponent } from './subcomponent/subcomponent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MusicGearLibraryComponent,
     TestComponent,
-    CartComponent
+    CartComponent,
+    SubcomponentComponent
   ],
   imports: [
     BrowserModule,

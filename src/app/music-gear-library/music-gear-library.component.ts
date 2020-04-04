@@ -9,12 +9,13 @@ import { CartService } from '../cart/cart.service';
 @Component({
   selector: 'app-music-gear-library',
   templateUrl: './music-gear-library.component.html',
-  styleUrls: ['./music-gear-library.component.scss']
+  styleUrls: ['./music-gear-library.component.scss'],
 })
 export class MusicGearLibraryComponent {
   /** Based on the screen size, switch from standard to one column per row */
 
   public cards;
+  public teststr: string;
   constructor(
     private breakpointObserver: BreakpointObserver,
     private gearQuery: GearQuery,
@@ -27,7 +28,7 @@ export class MusicGearLibraryComponent {
     });
 
     const values = this.gearQuery.selectAll({
-      asObject: true
+      asObject: true,
     });
     const select = this.gearQuery.select();
 
@@ -50,7 +51,7 @@ export class MusicGearLibraryComponent {
         model: entity.model,
         imageUrl: entity.imageUrl,
         cols: 1,
-        rows: 1
+        rows: 1,
       });
     });
     this.cards = cardsArray;
@@ -66,7 +67,7 @@ export class MusicGearLibraryComponent {
 
   public addToCart(gearId: number) {
     this.cartService.CartStore.add({
-      id: gearId
+      id: gearId,
     });
   }
 }

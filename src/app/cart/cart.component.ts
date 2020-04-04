@@ -10,6 +10,9 @@ import { Gear } from '../gear/gear.model';
   styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
+  /**
+   * @param items - items in the Cart
+   */
   private items: Cart[];
   constructor(private cartQuery: CartQuery, private gearQuery: GearQuery) { }
 
