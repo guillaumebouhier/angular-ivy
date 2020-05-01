@@ -17,23 +17,18 @@
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu" xPosition="before">
-          <button mat-menu-item>Expand</button>
+          <button mat-menu-item (click)="addToCart(card.id)">Add</button>
           <button mat-menu-item>Remove</button>
         </mat-menu>
       </mat-card-title>
     </mat-card-header>
-    <mat-card-content class="dashboard-card-content">
-      <div class="overlay">
-        <div matRipple>
-          <img
-            (click)="addToCart(card.id)"
-            class="cart zindex-10"
-            src="assets/cart.png"
-          />
-
-          <h2 class="link zindex-10">Add to cart</h2>
-        </div>
-
+    <mat-card-content
+      (click)="addToCart(card.id)"
+      class="dashboard-card-content"
+    >
+      <div matRipple>
+        <img class="cart zindex-10" src="assets/cart.png" />
+        <h2 class="link zindex-10">Add to cart</h2>
         <img class="gear" [src]="card.imageUrl" />
       </div>
     </mat-card-content>

@@ -9,7 +9,7 @@ import { CartQuery } from './cart/cart.query';
 })
 export class AppComponent {
   title = 'my ivy app';
-  constructor(private cartService: CartService, private cartQuery: CartQuery) { }
+  constructor(private cartService: CartService, private cartQuery: CartQuery) {}
 
   public get CartService() {
     return this.cartService;
@@ -20,9 +20,5 @@ export class AppComponent {
    */
   public get cartCount(): number {
     return this.cartQuery.getCount();
-  }
-
-  public voted() {
-    console.log('voted');
   }
 }

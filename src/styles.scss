@@ -47,6 +47,10 @@ mat-list {
   width: 120px;
 }
 
+.siteroot {
+  color: rgb(19, 19, 19);
+}
+
 .mat-card {
   min-width: 350px;
   margin-bottom: 20px;
@@ -63,10 +67,6 @@ mat-list {
     height: 85%;
     width: 100%;
 
-    .overlay {
-      height: 100%;
-      background-color: black;
-    }
     .gear {
       z-index: 0;
       height: auto;
@@ -76,6 +76,7 @@ mat-list {
       top: -3px;
       left: 0px;
       position: absolute;
+      transform: translateY(-46px);
     }
     .cart {
       position: relative;
