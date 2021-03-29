@@ -15,7 +15,6 @@ import { MatListModule } from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatRippleModule } from '@angular/material/core';
-import { NG_ENTITY_SERVICE_CONFIG } from '@datorama/akita-ng-entity-service';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { environment } from '../environments/environment';
@@ -29,7 +28,7 @@ import { SubcomponentComponent } from './subcomponent/subcomponent.component';
     MusicGearLibraryComponent,
     TestComponent,
     CartComponent,
-    SubcomponentComponent
+    SubcomponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,15 +44,11 @@ import { SubcomponentComponent } from './subcomponent/subcomponent.component';
     MatListModule,
     MatRippleModule,
     FlexLayoutModule,
-    environment.production ? [] : AkitaNgDevtools.forRoot(),
-    AkitaNgRouterStoreModule.forRoot()
+    environment.production
+      ? []
+      : AkitaNgDevtools.forRoot(),
+    AkitaNgRouterStoreModule.forRoot(),
   ],
-  providers: [
-    {
-      provide: NG_ENTITY_SERVICE_CONFIG,
-      useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' }
-    }
-  ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

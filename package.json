@@ -15,21 +15,21 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~10.1.6",
+    "@angular/animations": "~11.2.7",
     "@angular/cdk": "~10.2.5",
-    "@angular/common": "~10.1.6",
-    "@angular/compiler": "~10.1.6",
-    "@angular/core": "~10.1.6",
+    "@angular/common": "~11.2.7",
+    "@angular/compiler": "~11.2.7",
+    "@angular/core": "~11.2.7",
     "@angular/flex-layout": "^10.0.0-beta.32",
-    "@angular/forms": "~10.1.6",
+    "@angular/forms": "~11.2.7",
     "@angular/material": "^10.2.5",
-    "@angular/platform-browser": "~10.1.6",
-    "@angular/platform-browser-dynamic": "~10.1.6",
-    "@angular/router": "~10.1.6",
+    "@angular/platform-browser": "~11.2.7",
+    "@angular/platform-browser-dynamic": "~11.2.7",
+    "@angular/router": "~11.2.7",
     "@babel/core": "^7.9.6",
-    "@datorama/akita": "^4.22.0",
-    "@datorama/akita-ng-entity-service": "^2.0.0",
+    "@datorama/akita": "^6.0.0",
     "core-js": "^3.2.1",
+    "cypress": "^6.8.0",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
@@ -37,11 +37,10 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.1102.6",
     "@angular/cli": "^11.2.6",
-    "@angular/compiler-cli": "~10.1.6",
-    "@angular/language-service": "~10.1.6",
+    "@angular/compiler-cli": "~11.2.7",
+    "@angular/language-service": "~11.2.7",
     "@datorama/akita-ng-router-store": "^3.1.4",
     "@datorama/akita-ngdevtools": "^3.0.2",
-    "@microsoft/tsdoc": "^0.12.16",
     "@types/jest": "^24.0.20",
     "@types/node": "~12.7.5",
     "@typescript-eslint/eslint-plugin": "^2.16.0",
@@ -57,6 +56,6 @@
     "prettier": "^1.19.1",
     "ts-node": "~8.4.1",
     "tslint": "~6.1.0",
-    "typescript": "^3.9.7"
+    "typescript": "~4.1.0"
   }
 }
