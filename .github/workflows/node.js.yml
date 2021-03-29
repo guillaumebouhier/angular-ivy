@@ -31,4 +31,4 @@ jobs:
       with:
         headless: true
         browser: chrome
-        cache-key: node-v${{ matrix.node }}-on-${{ runner.os }}-hash-${{ hashFiles('package-lock.json') }}
+        cache-key: node-v${{ matrix.node-version }}-on-${{ runner.os }}-hash-${{ hashFiles('package-lock.json') }}
