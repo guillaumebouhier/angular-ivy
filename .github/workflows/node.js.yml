@@ -26,3 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm i
+    - name: Cypress run
+      uses: cypress-io/github-action@v2
+      with:
+        headless: true
+        browser: chrome
+        cache-key: node-v${{ matrix.node }}-on-${{ runner.os }}-hash-${{ hashFiles('package-lock.json') }}
