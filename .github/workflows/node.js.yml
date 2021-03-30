@@ -33,6 +33,7 @@ jobs:
         key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
 
     - name: Install Dependencies
+      if: steps.node-modules-cache.outputs.cache-hit != 'true
       run: npm i
       
     - name: Cypress run
@@ -40,6 +41,5 @@ jobs:
       with:
         headless: true
         browser: chrome
-        cache-key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
 
         
