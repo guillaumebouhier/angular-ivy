@@ -1,3 +1,5 @@
 describe("Test", () => {
-  it("Test it", () => {});
+  it("Test it", () => {
+    cy.get("fail");
+  });
 });

@@ -41,4 +41,10 @@ jobs:
         headless: true
         browser: chrome
 
+    - name: Generate Screenshots artifact
+      uses: actions/upload-artifact@v2
+      if: failure()
+      with:
+        name: cypress-screenshots
+        path: cypress/screenshots
         
