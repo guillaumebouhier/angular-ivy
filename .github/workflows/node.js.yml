@@ -33,7 +33,13 @@ jobs:
         key: ${{ runner.os }}-node-modules-${{ hashFiles('package-lock.json') }}
 
     - name: Install Dependencies
-      run: npm i
+      run: npm i && npm run predeploy && npm run deploy
+
+    - name: Deploy gh-pages
+      uses: JamesIves/github-pages-deploy-action@4.1.0
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: build # The folder the action should deploy.
       
     - name: Cypress run
       uses: cypress-io/github-action@v2
@@ -47,4 +53,6 @@ jobs:
       with:
         name: cypress-screenshots
         path: cypress/screenshots
+
+    
         
