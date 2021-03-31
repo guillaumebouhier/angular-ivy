@@ -1,5 +1,5 @@
 describe("Test", () => {
   it("Test it", () => {
-    cy.get("fail");
+    cy.visit("https://guillaumebouhier.github.io/angular-ivy");
   });
 });
